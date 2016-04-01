@@ -9,6 +9,7 @@
 // @include      /(https?:)?\/\/(www\.)?google\.((com)|((com?\.)?[\w]{2}))\/.*/
 // @include      /(https?:)?\/\/(www\.)?youtube\.com\/.*/
 // @grant        GM_addStyle
+// @run-at       document-start
 // ==/UserScript==
 GM_addStyle('#cnsh,#cnso,#cnsw,._FDh,._SRg,.yt-consent,.yt-dialog-bg,#yt-consent-dialog{display:none!important}');
-document.getElementById('cnsd').click(); // fire "remind me later"
+// document.getElementById('cnsd').click(); // fire "remind me later"
