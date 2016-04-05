@@ -10,7 +10,7 @@
 // @include      /(https?:)?\/\/(www\.)?youtube\.com\/.*/
 // @compatible   firefox+greasemonkey
 // @compatible   chrome
-// @compatible   safari
+// @compatible   opera
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
