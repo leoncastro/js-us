@@ -6,6 +6,7 @@
 // @name         goog-no-reminder
 // @version      0.06
 // @description  Remove "A privacy reminder from Google" permanently
+// @icon         https://addons.cdn.mozilla.net/user-media/addon_icons/661/661700-64.png
 // @include      /(https?:)?\/\/(www\.)?google\.((com)|((com?\.)?[\w]{2}))\/.*/
 // @include      /(https?:)?\/\/(www\.)?youtube\.com\/.*/
 // @compatible   firefox+greasemonkey
