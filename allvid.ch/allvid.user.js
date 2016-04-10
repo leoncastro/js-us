@@ -25,10 +25,8 @@
    {
     for(var k=0,l=s.length;k<l;k++)
     {
-     console.info('script',s[k]);
      if(/^\s*eval\(.*\)\s*$/.exec(s[k].text))
      {
-      console.warn('eval detected!');
       var n;
       try
       {
@@ -43,9 +41,9 @@
        document.body.appendChild(o);
       }
       v=document.querySelector('#admvpu');v&&v.remove();
-      v=document.querySelector('body>div+div');v&&v.remove();
-      v=document.querySelector('body>div+div');v&&v.remove();
+      Array.slice(document.querySelectorAll('body>div+div')).forEach(function(e){e.remove()});
      }
+     if(s[k].text)s[k].text='';
     }
    }
   }
