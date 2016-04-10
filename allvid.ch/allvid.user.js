@@ -42,13 +42,13 @@
        o.innerHTML='<style>body>div{height:90vh!important}body>a{position:absolute;bottom:2.5vh;right:1vw;color:#fff;text-decoration:none}.btn-green{height:10vh;padding:1.5vh 1vw;background-color:#4DE664;text-align:center;font-weight:bold;border-radius:5px}</style><span class="btn-green">Download</span>';
        document.body.appendChild(o);
       }
+      v=document.querySelector('#admvpu');v&&v.remove();
+      v=document.querySelector('body>div+div');v&&v.remove();
+      v=document.querySelector('body>div+div');v&&v.remove();
      }
     }
    }
   }
-  v=document.querySelector('#admvpu');v&&v.remove();
-  v=document.querySelector('body>div+div');v&&v.remove();
-  v=document.querySelector('body>div+div');v&&v.remove();
  });
 
 })();
