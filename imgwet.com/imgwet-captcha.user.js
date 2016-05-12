@@ -2,7 +2,7 @@
 // @author       @leoncastro
 // @namespace    https://github.com/leoncastro
 // @name         imgwet-captcha
-// @version      0.01
+// @version      0.02
 // @description  Resolve ImgWet captcha
 // @include      /^(?:https?:)?\/\/(?:www\.)?imgwet\.com\/img-.*/
 // @compatible   firefox+greasemonkey
@@ -21,7 +21,7 @@
   drw.getContext('2d').drawImage(img, 0, 0, img.width, img.height);
   for(var i = 0; i < 5; i++)
   {
-   var pix = drw.getContext('2d').getImageData(i * img.width / 5 + img.width / 10, 4, 1, 1).data;
+   var pix = drw.getContext('2d').getImageData(i * img.width / 5 + img.width / 10, 3, 1, 1).data;
    if(pix && !pix[0] && !pix[1] && !pix[2])
    {
     document.querySelector('#imgContinuei').value = i;
