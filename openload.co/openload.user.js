@@ -2,7 +2,7 @@
 // @author       @leoncastro
 // @namespace    https://github.com/leoncastro
 // @name         openload.co
-// @version      0.03
+// @version      0.03.1
 // @description  Remove anti-adblock, ads and timer waits, and show direct download link
 // @icon         https://openload.co/favicon.ico
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
@@ -29,7 +29,7 @@ window.open=function(){};
   $('.col-md-4.col-centered-sm iframe').remove();
   $('#downloadTimer').hide();
   $('#realdl').show();
-  $('#videooverlay').hide();
+  // $("#videooverlay,.title,.logocontainer").hide();
   // window.location=$('#realdl>a').attr('href');
  }
  setInterval(function (){ $("body>object").remove(); },100);
