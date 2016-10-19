@@ -3,12 +3,12 @@
 // @namespace    https://github.com/leoncastro
 // @license      MIT License; http://opensource.org/licenses/MIT
 // @name         facebook-mod-helper
-// @version      0.01
+// @version      0.03
 // @description  Facebook moderation helper
 // @icon         http://icons.iconarchive.com/icons/paomedia/small-n-flat/64/social-facebook-icon.png
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
 // @include      https://www.facebook.com/*
-// @include      /(https?:)?\/\/(www\.|[^\/]*)?facebook\.com\/.*/
+// @include      /^(https?:)?\/\/([^\.\/]+\.)?facebook\.com\/*.*/
 // @compatible   firefox+greasemonkey
 // @compatible   chrome+tampermonkey
 // @grant        none
@@ -48,46 +48,47 @@
  // @part-license      CC-BY-SA; https://creativecommons.org/licenses/by-sa/3.0/legalcode
  //
 
- $('head').append("\
-<style>\
-.fbmod-mnu{background-clip:content-box;background-origin:content-box;padding:0 3px 3px 0;width:24px;height:24px;cursor:pointer}\
-.fbmod-pad{margin:0;padding:4px 3px 0}\
-.fbmod-mnu-menu{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/shield-icon.png')}\
-.fbmod-mnu-menu.hide{-moz-filter:brightness(150%) invert(1) hue-rotate(205deg);-webkit-filter:brightness(150%) invert(1) hue-rotate(205deg);filter:brightness(150%) invert(1) hue-rotate(205deg)}\
-.fbmod-mnu-menu.show{-moz-filter:brightness(150%);-webkit-filter:brightness(150%);filter:brightness(150%)}\
-.fbmod-dlg-menu{width:24px;background-color:#fff;z-index:100;border:1px solid rgba(100, 100, 100, .4);box-shadow: 0 3px 8px rgba(0, 0, 0, .25);}\
-.fbmod-mnu-menu.hide+.fbmod-dlg-menu{display:none}\
-.fbmod-mnu-menu.show+.fbmod-dlg-menu{display:block}\
-.fbmod-nub{right:2px}\
-.fbmod-mnu-perm{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/shield-error-icon.png')}\
-.fbmod-mnu-temp{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/shield-warning-icon.png')}\
-.fbmod-mnu-wipe{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/sign-sync-icon.png')}\
-.fbmod-mnu-save{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/sign-down-icon.png')}\
-.fbmod-mnu-load{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/sign-up-icon.png')}\
-.fbmod-mnu-join{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/sign-right-icon.png')}\
-\
-.fbmod-ico{float:left;width:16px;height:16px}\
-.fbmod-ico-stop{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/16/sign-error-icon.png')}\
-.fbmod-ico-warn{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/16/sign-warning-icon.png')}\
-.fbmod-red-permaban{color:red}\
-.fbmod-red-temporal{color:orange}\
-</style>\
-");
+ $('head').append(`
+<style>
+.fbmod-mnu{background-clip:content-box;background-origin:content-box;padding:0 3px 3px 0;width:24px;height:24px;cursor:pointer}
+.fbmod-pad{margin:0;padding:4px 3px 0}
+.fbmod-mnu-menu{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/shield-icon.png')}
+.fbmod-mnu-menu.hide{-moz-filter:brightness(150%) invert(1) hue-rotate(205deg);-webkit-filter:brightness(150%) invert(1) hue-rotate(205deg);filter:brightness(150%) invert(1) hue-rotate(205deg)}
+.fbmod-mnu-menu.show{-moz-filter:brightness(150%);-webkit-filter:brightness(150%);filter:brightness(150%)}
+.fbmod-dlg-menu{width:24px;background-color:#fff;z-index:100;border:1px solid rgba(100, 100, 100, .4);box-shadow: 0 3px 8px rgba(0, 0, 0, .25);}
+.fbmod-mnu-menu.hide+.fbmod-dlg-menu{display:none}
+.fbmod-mnu-menu.show+.fbmod-dlg-menu{display:block}
+.fbmod-nub{right:2px}
+.fbmod-mnu-perm{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/shield-error-icon.png')}
+.fbmod-mnu-temp{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/shield-warning-icon.png')}
+.fbmod-mnu-wipe{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/sign-sync-icon.png')}
+.fbmod-mnu-save{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/sign-down-icon.png')}
+.fbmod-mnu-load{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/sign-up-icon.png')}
+.fbmod-mnu-join{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/24/sign-right-icon.png')}
+
+.fbmod-ico{float:left;width:16px;height:16px}
+.fbmod-ico-stop{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/16/sign-error-icon.png')}
+.fbmod-ico-warn{background-image:url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/16/sign-warning-icon.png')}
+.fbmod-red-permaban{color:#ff0000!important}
+.fbmod-red-temporal{color:#ffa500!important}
+</style>
+`);
  mainAddMenu();
  function mainAddMenu()
  {
-  $('._1uh-').eq(1).append("\
-<div class='_4kny'>\
- <div class='_4962'>\
-  <div class='fbmod-pad'>\
-   <div class='fbmod-mnu fbmod-mnu-menu hide'></div>\
-   <div class='__tw fbmod-dlg-menu'>\
-    <div class='beeperNub fbmod-nub'></div>\
-   </div>\
-   <div style='display:none'><input type='file' id='fbmod-dlg-file'/></div>\
-  </div>\
- </div>\
-</div>");
+  $('._1uh-').eq(1).append(`
+<div class='_4kny'>
+ <div class='_4962'>
+  <div class='fbmod-pad'>
+   <div class='fbmod-mnu fbmod-mnu-menu hide'></div>
+   <div class='__tw fbmod-dlg-menu'>
+    <div class='beeperNub fbmod-nub'></div>
+   </div>
+   <div style='display:none'><input type='file' id='fbmod-dlg-file'/></div>
+  </div>
+ </div>
+</div>
+`);
   $('.fbmod-mnu-menu').click(function(e){
    if($(this).hasClass('hide'))
     $(this).removeClass('hide').addClass('show');
@@ -230,7 +231,7 @@
  }
  function fbUrlUserName(url)
  {
-  var r = /(?:https?:)?\/\/(?:www\.|[^\/]*)?facebook\.com(\/(?:profile.php\?id=[0-9]*|[^\?]*))/i;
+  var r = /(?:https?:)?\/\/(?:[^\.\/]+\.)?facebook\.com(\/profile.php\?id=[0-9]+|\/[^\?]+)/i;
   return url.match(r)?url.match(r)[1]:0;
  }
 
