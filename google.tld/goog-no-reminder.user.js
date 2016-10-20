@@ -45,13 +45,13 @@
  else if(yt.exec(location.href))
  {
   onstart(function(){
-   _addStyle('\
-    .yt-consent,.yt-dialog-bg,#yt-consent-dialog{display:none!important}\
-    .sitewide-consent-visible .yt-fragment-target{margin-top:-50px!important;padding-top:50px!important}\
-    .appbar-hidden.sitewide-consent-visible #masthead-positioner-height-offset{height:50px!important}\
-    .sitewide-consent-visible #masthead-positioner-height-offset{height:91px!important}\
-    .sitewide-consent-visible #appbar-guide-menu{margin-top:50px!important}\
-   ');
+   _addStyle(`
+    .yt-consent,.yt-dialog-bg,#yt-consent-dialog{display:none!important}
+    .sitewide-consent-visible .yt-fragment-target{margin-top:-50px!important;padding-top:50px!important}
+    .appbar-hidden.sitewide-consent-visible #masthead-positioner-height-offset{height:50px!important}
+    .sitewide-consent-visible #masthead-positioner-height-offset{height:91px!important}
+    .sitewide-consent-visible #appbar-guide-menu{margin-top:50px!important}
+   `);
   });
   onready(function(){
    var b=window.top.document.querySelector('#body');
