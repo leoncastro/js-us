@@ -1,7 +1,7 @@
 // ==UserScript==
 // @author       @leoncastro
 // @namespace    https://github.com/leoncastro
-// @name         Greasy(Sleazy)fork
+// @name         greasy-sleazy-fork
 // @version      0.01
 // @description  Automatic jump to Sleazyfork when required
 // @icon         https://greasyfork.org/assets/blacklogo96-941a633c971b25c0c9e982ed499b5d8c.png
