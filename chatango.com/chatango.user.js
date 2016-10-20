@@ -4,9 +4,9 @@
 // @name         chatango
 // @version      0.05
 // @description  Restore Chatango "Legacy Flash version" style on new "HTML5 version" group pages
-// @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAvVBMVEUAAAAAdNIAKEsAN2QAg+8Af+kAeN0AN2UAGC8AguwAe98Ae+EAedwAOmgAO2sAMV0AhO8Ah/T///8Agu8Af+4AgO8Ai/sWifBfqvQFg+/w9v7r9P3n7/1ztfYAiPZpsPUkkfEcjfALhu/8/f/c6/zP5fzG3/uv1PqSxvh6uvb2+f7t9f7l7/3W6fy/3fun0PmezPiDvPZss/Vkr/VXqfRRpfNBnvIulfERiO8AfO4Aj/+42vqgzfiMwfc6mvLajLTdAAAAEHRSTlMAuRxcycnIWxna0cfGYUgwU9BTuQAAAURJREFUeNrt1dlOg1AQgOFTl7prOzOncEDWUqB2X23d3v+xtBYzsVcwvTLyX5EQPgIZBtU6shqogRooAyCRJkIxQFbwlk3nIQkBWiewyw20CNAfA+h5K28MsCABgHEPxhvSZKYwjLA6oJfw9Kx3UuTCkqoDNIGM9lQK79UBND3waH+48tZYHbCGYFPxNKRbAuARbL7urwOIKADiBILiJVqhhYI5eIW8mIPMmZEAmEGy+b6xGcFcAGDoQH+LiFu7+zXTkq+xD92+FVuLAeQk2gcmB3BHLsAkRhGA2k6drpMGBqU7kUwURoZQtNJ4huo/Uw38C6BddHiiXTLVKLo6IK4b5VI/nZz9EjoXqlIsMHCc0DlVQoEBocCAUGBAKjAgFRiQCgzIhHOfAanAgEy48RmQCU2fAVGXzRcGZMLtnTquh3tVrk8m9NAGg5m0uAAAAABJRU5ErkJggg==
+// @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAV1BMVEUAAAAAdNIAN2UAJkgAgu4AeuAAdNIAMV0AhO8Ah/UAgO////8XivAAi/xbqfTo8f3x9/5osPXB3vsokvGizvl9u/ZytPbb6/zR5vyRxfiv1Po/nfIAfO6CVw8sAAAACHRSTlMAuVsby8q4METCaPgAAAEDSURBVHgB7dXLUoNAFIRhokYn3SPMcL/k/Z9TjW1ZyQqalSX/ajb56gSmDkXY2QGsAg7gAHDLBhBzO7d9AxPAMvCrKsMCsCSOfdnXZIY1wcg64rOWVcR2ACXT7d8jViwdoOWM71PNyQDCyF4/K/tlK3A3OADnIQpQfx7wbuLADFlNNIDft485dTCAjoNOA7MDNIndFSFcdac3ARqBXQwxJ07w9sFEVmNFtvZGKuvEVGcYgATEJvo7Ucb/+LAcwAFcVHjosrLipF4eiPPraVXFT8/3wvtTsTUJPiDBByT4gAQfkLAPkCDAFwT4ggBfEGAL54uAPYIAXxDgCwJ2CALs3tYCH70HZ9BRF558AAAAAElFTkSuQmCC
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
-// @include      https://chatango.com
+// @include      http://chatango.com
 // @include      /^(https?:)?\/\/([^\.\/]+\.)+chatango\.com\/*.*/
 // @connect      chatango.com
 // @compatible   firefox+greasemonkey
