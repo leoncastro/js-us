@@ -15,19 +15,20 @@
 //
 !(function(){
 
- function addStyleEx(css, id)
+ function addStyleEx(css)
  {
-   var dad, obj = document.createElement('style');
-   obj.setAttribute('type', 'text/css');
-   id && obj.setAttribute('id', id);
-   obj.innerHTML = css;
-   dad = document.getElementsByTagName('head');
-   (dad && dad.length ? dad[0] : document).appendChild(obj);
+  var dad, obj = document.createElement('style');
+  obj.setAttribute('type', 'text/css');
+  obj.innerHTML = css;
+  dad = document.getElementsByTagName('head');
+  (dad && dad.length ? dad[0] : document).appendChild(obj);
+  if(document.readyState == 'loading')
+   document.addEventListener('DOMContentLoaded', function(){obj.parentNode.appendChild(obj)});
+  return obj;
  }
 
  function onReady(fn){(document.readyState!='loading')?fn():document.addEventListener('DOMContentLoaded',fn)}
  function qsRemove(a){var b=document.querySelector(a);if(b)b.remove()}
- function qsMoveLast(a){var b=document.querySelector(a);if(b)b.parentNode.appendChild(b)}
  function qsMoveAfter(a,b){var c=document.querySelector(a);if(c){var d=document.querySelector(b);if(d)d.parentNode.insertBefore(c,d.nextSibling)}}
 
  addStyleEx(`
@@ -905,6 +906,12 @@ pre.CodeRay {
  border: none;
  border-left: 6px solid #ffeb3b;
 }
+.notice {
+ background-color: #d9edf7;
+ border: none;
+ border-left: 6px solid #31708f;
+ padding: 0.5em;
+}
 pre {
  border-radius: inherit;
  border: inherit;
@@ -1121,13 +1128,11 @@ body > .width-constraint > table time {
  /*
  // </@custom.css>
  */
- `, 'greasyfork-theme');
+ `);
 
  onReady(function(){
   // remove only the CSS in the main site, not in the forum
   qsRemove('link[rel="stylesheet"][href*="/assets/application"]');
-  // move our stylesheet to the last position in the head
-  qsMoveLast('#greasyfork-theme');
 
   // reorganize elements on scripts info page:
   qsMoveAfter('#script-info>header', '#script-links');
