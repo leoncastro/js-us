@@ -13,7 +13,7 @@
  {
   var s = str;
   var a, b, c, d;
-  // s = s.replace(/\/\*(?:[\s\S]?)+?\*\//g, '');
+  s = s.replace(/\/\*(?:[\s\S]?)+?\*\//g, '');
   s = s.replace(/@namespace.*$/m, '');
   a = [];
   b = s.split('@-moz-document');
@@ -37,7 +37,7 @@
        a[i].url[j] = new RegExp(d[2].replace(/\./g, '\\.'), 'i');
        break;
       case 'url-prefix':
-       a[i].url[j] = new RegExp(d[2].replace(/\./g, '\\.') + '\/.*', 'i');
+       a[i].url[j] = new RegExp(d[2].replace(/\./g, '\\.') + '.*', 'i');
        break;
       case 'domain':
        a[i].url[j] = new RegExp('(https?:)?\/\/(www\.)?' + d[2].replace(/\./g, '\\.') + '\/.*', 'i');
