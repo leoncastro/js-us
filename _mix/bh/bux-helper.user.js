@@ -2,7 +2,7 @@
 // @author       @leoncastro
 // @namespace    https://github.com/leoncastro
 // @name         bux-helper
-// @version      0.02
+// @version      0.03
 // @description  bux-helper
 // @include      /^(https?:)?\/\/(www\.)?clixsense\.com\/en\/View_Ads\/.*/
 // @include      /^(https?:)?\/\/(www\.)?neobux\.com\/v\/.*/
@@ -27,7 +27,7 @@
  bux.push({
   a: /^(https?:)?\/\/(www\.)?clixsense\.com\/en\/View_Ads\/.*/,
   b: 'body>div>table>tbody>tr>td+td+td',
-  c: {id:'#frm,iframe#ad,.frmw>iframe',src:function(s,r){s=s.split('http');s[2]=r;return s.join('http')},end:function(e){eval(e.getAttribute('onload'))}},
+  c: {id:'#frm,iframe#ad,.frmw>iframe',src:function(s,r){s=s.split('|');return s[0]+'|'+s[1]+'|'+r},end:function(e){eval(e.getAttribute('onload'))}},
   d: 'a[title="Close window"]',
   e: 'win.close()',
  });
