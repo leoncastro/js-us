@@ -9,7 +9,7 @@
 // @compatible   firefox+greasemonkey
 // @compatible   chrome+tampermonkey
 // @grant        none
-// @run-at       document-start
+// @run-at       document-end
 // ==/UserScript==
 //
 (function($){
