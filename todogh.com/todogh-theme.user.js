@@ -1,9 +1,9 @@
 // ==UserScript==
 // @author       @leoncastro
 // @namespace    https://github.com/leoncastro
-// @name         todogh
+// @name         todogh-theme
 // @version      0.01
-// @description  todogh-theme
+// @description  New design for todogh.com
 // @include      http://todogh.com/directo/
 // @include      http://todogh.com/telecinco/
 // @include      http://todogh.com/chat-grande/
