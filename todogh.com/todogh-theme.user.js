@@ -2,7 +2,7 @@
 // @author       @leoncastro
 // @namespace    https://github.com/leoncastro
 // @name         todogh-theme
-// @version      0.01
+// @version      0.02
 // @description  New design for todogh.com
 // @include      http://todogh.com/directo/
 // @include      http://todogh.com/telecinco/
@@ -33,13 +33,14 @@
 .section.wrapper{top:80px;padding:0}
 body.single .content{width:100%}
 .single .post-content{padding:0}
-.post-header,.adsbygoogle,.sidebar,.section.footer,.section.credits{display:none!important}
+.post-header,.adsbygoogle,.sidebar,.section.footer,.section.credits,.todog-adlabel{display:none!important}
 /* CHAT GRANDE */
 .page-id-60 .post-content>p>iframe{width:100%!important}
 /* DIRECTO */
 .page-id-11 .post-content>p[style]{width:50%;margin:0;font-size:80%}
 .page-id-11 .post-content>p[style]~div>p>iframe{float:left;width:50%!important;height:100%!important;min-height:500px}
 .page-id-11 .post-content>p[style]~p{display:none}
+.page-id-11 .post-content>h6{display:none}
 /* TELECINCO */
 .page-id-13 .post-content>div+p+div{ width:50%;margin:0; padding:0;font-size:80%}
 .page-id-13 .post-content>div+p+div+div{width:100%}
