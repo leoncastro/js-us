@@ -2,7 +2,7 @@
 // @author       @leoncastro
 // @namespace    https://github.com/leoncastro
 // @name         todogh-theme
-// @version      0.03
+// @version      0.04
 // @description  New design for todogh.com
 // @include      http://todogh.com/directo/
 // @include      http://todogh.com/telecinco/
