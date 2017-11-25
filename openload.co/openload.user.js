@@ -19,6 +19,7 @@
  window.adblock=false;
  window.adblock2=false;
  window.turnoff=true;
+ window.exclude=true;
  window.open=function(){};
  //
  // @run-at document-end
