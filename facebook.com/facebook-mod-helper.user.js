@@ -3,7 +3,7 @@
 // @namespace    https://github.com/leoncastro
 // @license      MIT License; http://opensource.org/licenses/MIT
 // @name         facebook-mod-helper
-// @version      0.03
+// @version      0.04
 // @description  Facebook moderation helper
 // @icon         http://icons.iconarchive.com/icons/paomedia/small-n-flat/64/social-facebook-icon.png
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
@@ -77,7 +77,7 @@
  mainAddMenu();
  function mainAddMenu()
  {
-  $('._1uh-').eq(1).append(`
+  $('._cy6').eq(1).append(`
 <div class='_4kny'>
  <div class='_4962'>
   <div class='fbmod-pad'>
